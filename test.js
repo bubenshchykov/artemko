@@ -1,4 +1,5 @@
-var add = require('../');
+var add = require('.');
+var expect = require('chai').expect;
 
 describe('calculator', () => {
 
