@@ -2,13 +2,11 @@ function add(expression) {
 	if (!expression) {
 		return 0;
 	}
-	var parts = expression.split(',');
 
-	var res = parts.reduce(function (accum, curr) {
-		return accum += +curr;
-	}, 0);
-
-	return res;
+	return expression
+		.split(',')
+		.map(str => Number.parseFloat(str))
+		.reduce((accum, cur) => accum + cur, 0);
 }
 
 module.exports = add;
