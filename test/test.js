@@ -14,4 +14,8 @@ describe('calculator', () => {
 		expect(add('1,2')).to.eql(3);
 	});
 
+	it('add unkown number of elements should return a valid result', () => {
+		expect(add('1,2,3,4,5,6')).to.eql(21);
+	});
+
 });

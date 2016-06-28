@@ -6,7 +6,12 @@ function add(expression) {
 	if (parts.length === 1) {
 		return Number.parseFloat(parts[0]);
 	}
-	return Number.parseFloat(parts[0]) + Number.parseFloat(parts[1]);
+
+	var res = parts.reduce(function (accum, curr) {
+		return accum += +curr;
+	}, 0);
+
+	return res;
 }
 
 module.exports = add;
